@@ -1,9 +1,13 @@
 @keyframes fade {
-  to { opacity: 0.5; }
+  to { opacity: 0.65; }
 }
 
 @keyframes rise {
   to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes corner-in {
+  to { opacity: 1; transform: scale(1); }
 }
 
 .imageBg {
@@ -11,13 +15,57 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 52vh;
+  height: 60vh;
   background: url('/spices.webp') center 60% / cover no-repeat;
-  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 40%, black 100%);
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 40%, black 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 35%, rgba(0,0,0,0.75) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 35%, rgba(0,0,0,0.75) 100%);
   opacity: 0;
-  animation: fade 2.5s ease 1.2s forwards;
+  animation: fade 3s ease 0.8s forwards;
   z-index: 2;
+}
+
+.frame {
+  position: fixed;
+  inset: 20px;
+  pointer-events: none;
+  z-index: 14;
+}
+
+.frame span {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  opacity: 0;
+  transform: scale(0.7);
+  animation: corner-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.6s forwards;
+}
+
+.frame span:nth-child(1) {
+  top: 0; left: 0;
+  border-top: 1px solid rgba(196, 130, 26, 0.55);
+  border-left: 1px solid rgba(196, 130, 26, 0.55);
+  animation-delay: 1.6s;
+}
+
+.frame span:nth-child(2) {
+  top: 0; right: 0;
+  border-top: 1px solid rgba(196, 130, 26, 0.55);
+  border-right: 1px solid rgba(196, 130, 26, 0.55);
+  animation-delay: 1.7s;
+}
+
+.frame span:nth-child(3) {
+  bottom: 0; left: 0;
+  border-bottom: 1px solid rgba(196, 130, 26, 0.55);
+  border-left: 1px solid rgba(196, 130, 26, 0.55);
+  animation-delay: 1.8s;
+}
+
+.frame span:nth-child(4) {
+  bottom: 0; right: 0;
+  border-bottom: 1px solid rgba(196, 130, 26, 0.55);
+  border-right: 1px solid rgba(196, 130, 26, 0.55);
+  animation-delay: 1.9s;
 }
 
 .socialRow {
@@ -25,7 +73,7 @@
   gap: 0.8rem;
   margin-top: 0.8em;
   opacity: 0;
-  animation: rise 1.2s cubic-bezier(0.16, 1, 0.3, 1) 1.3s forwards;
+  animation: rise 1.2s cubic-bezier(0.16, 1, 0.3, 1) 1.5s forwards;
 }
 
 .socialLink {
@@ -34,16 +82,17 @@
   justify-content: center;
   width: 48px;
   height: 48px;
-  border: 1px solid var(--blue);
+  border: 1px solid rgba(232, 148, 32, 0.5);
   border-radius: 4px;
-  color: var(--blue);
-  opacity: 0.8;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  color: var(--accent);
+  opacity: 0.75;
+  transition: transform 0.2s ease, opacity 0.2s ease, border-color 0.2s ease;
 }
 
 .socialLink:hover {
   transform: scale(1.12);
   opacity: 1;
+  border-color: var(--accent);
 }
 
 .stage {
@@ -61,16 +110,39 @@
 }
 
 .title {
-  font-size: 25vw;
-  font-weight: 900;
+  font-size: 17vw;
+  font-weight: 800;
   line-height: 0.9;
   letter-spacing: -0.03em;
   color: var(--ink);
+  text-shadow: 0 0 60px rgba(196, 130, 26, 0.18);
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(24px);
   animation: rise 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
   will-change: opacity, transform;
   margin: 0;
+}
+
+.divider {
+  display: block;
+  position: relative;
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--accent), transparent);
+  opacity: 0;
+  animation: rise 1s ease 0.85s forwards;
+}
+
+.divider::before {
+  content: '◆';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 7px;
+  color: var(--accent);
+  background: var(--bg);
+  padding: 0 4px;
 }
 
 .subtitle {
@@ -78,10 +150,10 @@
   font-weight: 400;
   font-style: italic;
   letter-spacing: 0.15em;
-  color: var(--blue);
+  color: var(--accent);
   opacity: 0;
-  transform: translateY(16px);
-  animation: rise 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards;
+  transform: translateY(10px);
+  animation: rise 1.2s cubic-bezier(0.16, 1, 0.3, 1) 1s forwards;
   will-change: opacity, transform;
 }
 
@@ -89,10 +161,10 @@
   font-size: 24px;
   font-weight: 400;
   letter-spacing: 0.1em;
-  color: var(--ink);
+  color: rgba(242, 228, 192, 0.6);
   opacity: 0;
-  transform: translateY(12px);
-  animation: rise 1.2s cubic-bezier(0.16, 1, 0.3, 1) 1s forwards;
+  transform: translateY(8px);
+  animation: rise 1.2s cubic-bezier(0.16, 1, 0.3, 1) 1.2s forwards;
   will-change: opacity, transform;
 }
 
