@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { Cormorant_Garamond } from 'next/font/google'
+import { Sansita } from 'next/font/google'
 import './globals.css'
 
-const cormorant = Cormorant_Garamond({
+const sansita = Sansita({
   subsets: ['latin'],
-  weight: ['300', '600'],
+  weight: ['400', '900'],
   style: ['normal', 'italic'],
-  variable: '--font-cormorant',
+  variable: '--font-sansita',
   display: 'swap',
 })
 
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="it" className={cormorant.variable}>
+    <html lang="it" className={sansita.variable}>
       <body>{children}</body>
     </html>
   )

@@ -19,7 +19,7 @@ html, body {
 body {
   background-color: var(--bg);
   color: var(--ink);
-  font-family: var(--font-cormorant), Georgia, serif;
+  font-family: var(--font-sansita), Georgia, sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
