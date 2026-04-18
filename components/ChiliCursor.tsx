@@ -1,12 +1,18 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 export default function ChiliCursor() {
   const cursorRef = useRef<SVGSVGElement>(null)
   const trailRef  = useRef<SVGSVGElement>(null)
+  const [isTouch, setIsTouch] = useState(false)
 
   useEffect(() => {
+    if (window.matchMedia('(pointer: coarse)').matches) {
+      setIsTouch(true)
+      return
+    }
+
     const cursor = cursorRef.current
     const trail  = trailRef.current
     if (!cursor || !trail) return
@@ -42,6 +48,8 @@ export default function ChiliCursor() {
     left: '-100px',
     top:  '-100px',
   }
+
+  if (isTouch) return null
 
   return (
     <>
