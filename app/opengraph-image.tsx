@@ -5,14 +5,14 @@ import sharp from 'sharp'
 
 export const alt = 'Fasid Fard — Fabbrica Siciliana Droghe'
 export const size = { width: 1200, height: 630 }
-export const contentType = 'image/png'
+export const contentType = 'image/jpeg'
 
 export default async function Image() {
   const webpBuffer = readFileSync(join(process.cwd(), 'public', 'spices.webp'))
   const pngBuffer = await sharp(webpBuffer).resize(1260, 630, { fit: 'cover' }).png().toBuffer()
   const src = `data:image/png;base64,${pngBuffer.toString('base64')}`
 
-  return new ImageResponse(
+  const pngResponse = new ImageResponse(
     (
       <div
         style={{
@@ -58,4 +58,8 @@ export default async function Image() {
     ),
     { ...size }
   )
+
+  const renderedPng = Buffer.from(await pngResponse.arrayBuffer())
+  const jpeg = await sharp(renderedPng).jpeg({ quality: 82 }).toBuffer()
+  return new Response(jpeg, { headers: { 'Content-Type': 'image/jpeg' } })
 }

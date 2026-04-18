@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import './globals.css'
 
-const title = 'Fasid Fard'
-const description = 'Fabbrica Siciliana Droghe — Via Leucatia, 76A, 95125 Catania CT'
+const title = 'Fasid Fard — Fabbrica Siciliana Droghe | Catania'
+const description = 'Spezie e droghe artigianali a Catania. Scopri la selezione di Fasid Fard, fabbrica siciliana di qualità. Via Leucatia, 76A, 95125 Catania CT.'
 const url = 'https://www.fasidfard.com'
 
 export const metadata: Metadata = {
