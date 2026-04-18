@@ -28,7 +28,6 @@ body {
   cursor: none;
 }
 
-/* Grain overlay */
 body::before {
   content: '';
   position: fixed;
@@ -44,7 +43,6 @@ body::before {
   animation: grain 0.8s steps(1) infinite;
 }
 
-/* Soft parchment vignette */
 body::after {
   content: '';
   position: fixed;

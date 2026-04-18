@@ -1,4 +1,4 @@
-@keyframes fadeUp {
+@keyframes fade {
   to { opacity: 0.5; }
 }
 
@@ -12,11 +12,11 @@
   left: 0;
   right: 0;
   height: 52vh;
-  background: url('/spices.png') center 60% / cover no-repeat;
+  background: url('/spices.webp') center 60% / cover no-repeat;
   mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 40%, black 100%);
   -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 40%, black 100%);
   opacity: 0;
-  animation: fadeUp 2.5s ease 1.2s forwards;
+  animation: fade 2.5s ease 1.2s forwards;
   z-index: 2;
 }
 
@@ -37,8 +37,8 @@
   border: 1px solid var(--blue);
   border-radius: 4px;
   color: var(--blue);
-  transition: transform 0.2s ease, opacity 0.2s ease;
   opacity: 0.8;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .socialLink:hover {
@@ -69,6 +69,7 @@
   opacity: 0;
   transform: translateY(40px);
   animation: rise 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+  will-change: opacity, transform;
   margin: 0;
 }
 
@@ -81,6 +82,7 @@
   opacity: 0;
   transform: translateY(16px);
   animation: rise 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards;
+  will-change: opacity, transform;
 }
 
 .address {
@@ -91,4 +93,5 @@
   opacity: 0;
   transform: translateY(12px);
   animation: rise 1.2s cubic-bezier(0.16, 1, 0.3, 1) 1s forwards;
+  will-change: opacity, transform;
 }
