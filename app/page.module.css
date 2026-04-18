@@ -8,13 +8,13 @@
 
 .imageBg {
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
   height: 52vh;
-  background: url('/spices.png') center 40% / cover no-repeat;
-  mask-image: linear-gradient(to top, transparent 0%, rgba(0,0,0,0.6) 45%, black 100%);
-  -webkit-mask-image: linear-gradient(to top, transparent 0%, rgba(0,0,0,0.6) 45%, black 100%);
+  background: url('/spices.png') center 60% / cover no-repeat;
+  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.6) 45%, black 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.6) 45%, black 100%);
   opacity: 0;
   animation: fadeUp 2.5s ease 1.2s forwards;
   z-index: 2;
@@ -55,6 +55,9 @@
   flex-direction: column;
   align-items: center;
   gap: 0.6em;
+  align-self: flex-start;
+  margin-top: 6vh;
+  width: 100%;
 }
 
 .title {
