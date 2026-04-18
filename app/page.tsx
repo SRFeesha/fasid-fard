@@ -10,17 +10,30 @@ export default function Home() {
         <h1 className={styles.title}>Fasid Fard</h1>
         <p className={styles.subtitle}>fabbrica siciliana di droghe</p>
         <p className={styles.address}>Via Leucatia, 76A, 95125 Catania CT</p>
-        <a
-          href="https://www.facebook.com/fasidfard/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.fbLink}
-          aria-label="Facebook"
-        >
-          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-          </svg>
-        </a>
+        <div className={styles.socialRow}>
+          <a
+            href="https://www.facebook.com/fasidfard/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.socialLink}
+            aria-label="Facebook"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+          </a>
+          <a
+            href="https://share.google/Yf9MXUXyYNxT8qwJc"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.socialLink}
+            aria-label="Google Maps"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+          </a>
+        </div>
       </div>
     </>
   )

@@ -20,7 +20,15 @@
   z-index: 2;
 }
 
-.fbLink {
+.socialRow {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.8em;
+  opacity: 0;
+  animation: rise 1.2s cubic-bezier(0.16, 1, 0.3, 1) 1.3s forwards;
+}
+
+.socialLink {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,14 +37,13 @@
   border: 1px solid var(--accent);
   border-radius: 50%;
   color: var(--accent);
-  opacity: 0;
-  margin-top: 0.8em;
-  animation: rise 1.2s cubic-bezier(0.16, 1, 0.3, 1) 1.3s forwards;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  opacity: 0.8;
 }
 
-.fbLink:hover {
-  transform: scale(1.1);
+.socialLink:hover {
+  transform: scale(1.12);
+  opacity: 1;
 }
 
 .stage {
