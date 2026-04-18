@@ -13,8 +13,8 @@
   right: 0;
   height: 52vh;
   background: url('/spices.png') center 60% / cover no-repeat;
-  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.6) 45%, black 100%);
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.6) 45%, black 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 40%, black 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 40%, black 100%);
   opacity: 0;
   animation: fadeUp 2.5s ease 1.2s forwards;
   z-index: 2;
@@ -34,9 +34,9 @@
   justify-content: center;
   width: 48px;
   height: 48px;
-  border: 1px solid var(--accent);
+  border: 1px solid var(--blue);
   border-radius: 4px;
-  color: var(--accent);
+  color: var(--blue);
   transition: transform 0.2s ease, opacity 0.2s ease;
   opacity: 0.8;
 }
@@ -77,7 +77,7 @@
   font-weight: 300;
   font-style: italic;
   letter-spacing: 0.25em;
-  color: var(--accent);
+  color: var(--blue);
   opacity: 0;
   transform: translateY(16px);
   animation: rise 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards;
