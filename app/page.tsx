@@ -6,10 +6,9 @@ export default function Home() {
     <>
       <ChiliCursor />
       <div className={styles.stage}>
-        <span className={styles.greeting}>— a voi —</span>
-        <span className={styles.word}>ciao<span className={styles.comma}>,</span></span>
-        <span className={styles.word}>esistiamo<span className={styles.period}>!</span></span>
-        <span className={styles.line} />
+        <h1 className={styles.title}>Fasid Fard</h1>
+        <p className={styles.subtitle}>fabbrica siciliana di droghe</p>
+        <p className={styles.address}>Via Leucatia, 76A, 95125 Catania CT</p>
       </div>
     </>
   )

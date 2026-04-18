@@ -11,8 +11,8 @@ const cormorant = Cormorant_Garamond({
 })
 
 export const metadata: Metadata = {
-  title: 'ciao, esistiamo.',
-  description: 'fasid-fard',
+  title: 'Fasid Fard',
+  description: 'Fabbrica siciliana di droghe — Via Leucatia, 76A, 95125 Catania CT',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
