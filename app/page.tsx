@@ -5,6 +5,7 @@ export default function Home() {
   return (
     <>
       <ChiliCursor />
+      <div className={styles.imageBg} />
       <div className={styles.stage}>
         <h1 className={styles.title}>Fasid Fard</h1>
         <p className={styles.subtitle}>fabbrica siciliana di droghe</p>
