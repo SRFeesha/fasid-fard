@@ -23,10 +23,10 @@ export default function Home() {
       </div>
       <div className={styles.imageBg} />
       <div className={styles.stage}>
+        <p className={styles.subtitle}>Fabbrica Siciliana Droghe</p>
         <h1 className={styles.title}>Fasid Fard</h1>
-        <span className={styles.divider} />
-        <p className={styles.subtitle}>fabbrica siciliana di droghe</p>
         <p className={styles.address}>Via Leucatia, 76A, 95125 Catania CT</p>
+        <span className={styles.divider} />
         <div className={styles.socialRow}>
           {SOCIAL_LINKS.map(({ href, label, icon }) => (
             <a
@@ -37,7 +37,7 @@ export default function Home() {
               className={styles.socialLink}
               aria-label={label}
             >
-              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
                 {icon}
               </svg>
             </a>
