@@ -37,7 +37,7 @@ export default function Home() {
               className={styles.socialLink}
               aria-label={label}
             >
-              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
                 {icon}
               </svg>
             </a>

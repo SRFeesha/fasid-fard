@@ -21,8 +21,8 @@
   right: 0;
   height: 60vh;
   background: url('/spices.webp') center 40% / cover no-repeat;
-  mask-image: linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.3) 65%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.3) 65%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
   opacity: 0;
   animation: fade 3s ease 0.8s forwards;
   z-index: 2;
@@ -46,29 +46,29 @@
 
 .frame span:nth-child(1) {
   top: 0; left: 0;
-  border-top: 1px solid rgba(196, 130, 26, 0.55);
-  border-left: 1px solid rgba(196, 130, 26, 0.55);
+  border-top: 1px solid rgba(184, 101, 10, 0.5);
+  border-left: 1px solid rgba(184, 101, 10, 0.5);
   animation-delay: 1.6s;
 }
 
 .frame span:nth-child(2) {
   top: 0; right: 0;
-  border-top: 1px solid rgba(196, 130, 26, 0.55);
-  border-right: 1px solid rgba(196, 130, 26, 0.55);
+  border-top: 1px solid rgba(184, 101, 10, 0.5);
+  border-right: 1px solid rgba(184, 101, 10, 0.5);
   animation-delay: 1.7s;
 }
 
 .frame span:nth-child(3) {
   bottom: 0; left: 0;
-  border-bottom: 1px solid rgba(196, 130, 26, 0.55);
-  border-left: 1px solid rgba(196, 130, 26, 0.55);
+  border-bottom: 1px solid rgba(184, 101, 10, 0.5);
+  border-left: 1px solid rgba(184, 101, 10, 0.5);
   animation-delay: 1.8s;
 }
 
 .frame span:nth-child(4) {
   bottom: 0; right: 0;
-  border-bottom: 1px solid rgba(196, 130, 26, 0.55);
-  border-right: 1px solid rgba(196, 130, 26, 0.55);
+  border-bottom: 1px solid rgba(184, 101, 10, 0.5);
+  border-right: 1px solid rgba(184, 101, 10, 0.5);
   animation-delay: 1.9s;
 }
 
@@ -86,20 +86,16 @@
   justify-content: center;
   width: 48px;
   height: 48px;
-  background: linear-gradient(145deg, rgba(196, 130, 26, 0.32) 0%, rgba(160, 58, 18, 0.28) 100%);
-  border: 1px solid rgba(196, 130, 26, 0.7);
-  border-radius: 3px;
-  color: rgba(242, 228, 192, 0.9);
-  box-shadow: inset 0 1px 0 rgba(242, 210, 120, 0.15);
-  transition: transform 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
+  background: #d9c4a0;
+  border: none;
+  border-radius: 14px;
+  color: var(--ink);
+  transition: transform 0.18s ease, background 0.18s ease;
 }
 
 .socialLink:hover {
-  transform: scale(1.1);
-  background: linear-gradient(145deg, rgba(196, 130, 26, 0.55) 0%, rgba(160, 58, 18, 0.46) 100%);
-  box-shadow:
-    inset 0 1px 0 rgba(242, 210, 120, 0.2),
-    0 0 18px rgba(196, 130, 26, 0.45);
+  transform: scale(1.08);
+  background: #cdb48c;
 }
 
 .stage {
@@ -122,7 +118,6 @@
   line-height: 0.9;
   letter-spacing: -0.03em;
   color: var(--ink);
-  text-shadow: 0 0 60px rgba(196, 130, 26, 0.18);
   opacity: 0;
   transform: translateY(24px);
   animation: rise 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.55s forwards;
@@ -150,7 +145,7 @@
   font-size: 7px;
   color: var(--accent);
   background: var(--bg);
-  padding: 0 4px;
+  padding: 0 5px;
 }
 
 .subtitle {
@@ -169,7 +164,7 @@
   font-size: 24px;
   font-weight: 400;
   letter-spacing: 0.1em;
-  color: rgba(242, 228, 192, 0.6);
+  color: var(--muted);
   margin-top: 0.6em;
   opacity: 0;
   transform: translateY(8px);
