@@ -20,6 +20,21 @@
   z-index: 2;
 }
 
+.fbLink {
+  position: fixed;
+  bottom: 1.8rem;
+  left: 2rem;
+  z-index: 20;
+  color: var(--ink);
+  opacity: 0.45;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.fbLink:hover {
+  opacity: 1;
+  color: var(--accent);
+}
+
 .stage {
   position: relative;
   text-align: center;
