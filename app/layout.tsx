@@ -1,14 +1,5 @@
 import type { Metadata } from 'next'
-import { Sansita } from 'next/font/google'
 import './globals.css'
-
-const sansita = Sansita({
-  subsets: ['latin'],
-  weight: ['400', '900'],
-  style: ['normal', 'italic'],
-  variable: '--font-sansita',
-  display: 'swap',
-})
 
 export const metadata: Metadata = {
   title: 'Fasid Fard',
@@ -17,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="it" className={sansita.variable}>
+    <html lang="it">
       <body>{children}</body>
     </html>
   )
